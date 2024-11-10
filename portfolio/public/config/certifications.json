@@ -1,0 +1,15 @@
+[
+    {
+      "title": "Certified React Developer",
+      "institution": "Udemy",
+      "date": "Jan 2021",
+      "description": "A certification course that covers the fundamentals and advanced concepts of React, including hooks, context API, and state management."
+    },
+    {
+      "title": "Full-Stack Web Development with Node.js",
+      "institution": "Coursera",
+      "date": "Dec 2020",
+      "description": "Course on building full-stack web applications using Node.js, Express, MongoDB, and React."
+    }
+  ]
+  

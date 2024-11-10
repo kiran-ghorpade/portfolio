@@ -1,0 +1,15 @@
+[
+    {
+      "degree": "Bachelor of Technology in Computer Science",
+      "institution": "University of Pune",
+      "duration": "2016 - 2020",
+      "location": "Pune, Maharashtra",
+      "description": "Specialized in Software Development, Data Structures, and Web Development.",
+      "achievements": [
+        "Graduated with a 3.8 GPA.",
+        "Completed a capstone project on building a real-time chat application.",
+        "Won the first prize in the University Hackathon 2019."
+      ]
+    }
+  ]
+  

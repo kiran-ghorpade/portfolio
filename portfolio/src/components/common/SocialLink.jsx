@@ -1,41 +1,33 @@
 /* eslint-disable react/prop-types */
 
-import { Icon } from "@mui/material";
-
-//     font-size: 17px;
-//     display: inline-block;
-//     text-align: center;
-//     border-radius: 50%;
-//     background: rgba(0, 0, 0, .1);
-//     color: #a5b3ce;
+import { IconButton, useTheme } from "@mui/material";
 
 function SocialLink({ socialAccount }) {
+  const theme = useTheme();
+
   return (
-    <Icon sx={{ height: "50px", width: "50px" }}>
-      <a
-        style={{
-          width: "50px",
-          height: "50px",
-          paddingTop: "6px",
-          fontSize: "17px",
-          display: "inline-block",
-          textAlign: "center",
-          borderRadius: "50%",
-          background: "rgba(0, 0, 0, 0.1)",
-          color: "#a5b3ce",
+    <a href={socialAccount?.link} target="_blank">
+      <IconButton
+        color={theme.palette.primary.main}
+        sx={{
+          width: "40px",
+          height: "40px",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          borderRadius: "10%",
+          background: theme.palette.common.white,
         }}
-        href={socialAccount?.link}
-        target="_blank"
       >
         <img
           height={30}
           width={30}
-          style={{ marginTop: 2, }}
+          style={{ marginTop: 2 }}
           src={socialAccount?.icon}
           alt={socialAccount?.name}
         />
-      </a>
-    </Icon>
+      </IconButton>
+    </a>
   );
 }
 

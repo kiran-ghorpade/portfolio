@@ -1,0 +1,23 @@
+{
+  "name": {
+    "firstName": "Kiran",
+    "middleName": "Krushna",
+    "lastName": "Ghorpade"
+  },
+  "title": "Full-Stack Developer",
+  "type": "Personal Information",
+  "description": "Active GitHub user with multiple open-source contributions and repositories. Passionate about learning new technologies and solving complex problems with code.",
+  "image": "/public/assets/images/kiran/Kiran_Image2.jpg",
+  "contact": {
+    "email": "kiran.ghorpade@example.com",
+    "phone": "+1234567890",
+    "address": "Pune, Maharashtra, India"
+  },
+  "links": {
+    "github": "https://www.github.com/kiran-ghorpade",
+    "linkedin": "https://www.linkedin.com/in/kiran-ghorpade",
+    "twitter": "https://twitter.com/kiran_ghorpade",
+    "portfolio": "https://www.kirangh.com",
+    "blog": "https://dev.to/kiran_ghorpade"
+  }
+}

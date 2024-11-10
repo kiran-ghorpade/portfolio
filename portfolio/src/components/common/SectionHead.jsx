@@ -4,7 +4,7 @@ import { Typography } from "@mui/material";
 function SectionHead({ children }) {
   return (
     <Typography
-      variant="h2"
+      variant="h5"
       fontSize="1.75rem"
       fontWeight=" 900"
       letterSpacing=".1rem"

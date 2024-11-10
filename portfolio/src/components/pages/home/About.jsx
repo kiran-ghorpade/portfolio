@@ -1,6 +1,6 @@
 import { Button, Stack, Typography } from "@mui/material";
-import Section from "../../core/Section";
-import SectionHead from "../../core/SectionHead";
+import Section from "../../common/Section";
+import SectionHead from "../../common/SectionHead";
 
 function About() {
   return (

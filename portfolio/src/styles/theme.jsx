@@ -6,11 +6,11 @@ const lightTheme = createTheme({
     mode: 'light',
     primary: {
       main: '#fe655c', // --bs-primary
-      contrastText: '#662825', // --bs-primary-text-emphasis
+      contrastText: '#fff', // --bs-primary-text-emphasis
     },
     secondary: {
       main: '#4f6591', // --bs-secondary
-      contrastText: '#20283a', // --bs-secondary-text-emphasis
+      contrastText: '#fff', // --bs-secondary-text-emphasis
     },
     success: {
       main: '#198754', // --bs-success
@@ -30,7 +30,7 @@ const lightTheme = createTheme({
     },
     background: {
       default: '#fff', // --bs-body-bg
-      paper: '#f8f9fa', // --bs-light-bg-subtle
+      paper: '#e2e2e2', // --bs-light-bg-subtle
     },
     text: {
       primary: '#212529', // --bs-body-color
@@ -69,6 +69,7 @@ const lightTheme = createTheme({
     'none',
     '0 0.5rem 1rem rgba(0, 0, 0, 0.15)', // --bs-box-shadow
     '0 0.125rem 0.25rem rgba(0, 0, 0, 0.075)', // --bs-box-shadow-sm
+    '0 1rem 3rem rgba(0, 0, 0, 0.175)', // --bs-box-shadow-lg
     '0 1rem 3rem rgba(0, 0, 0, 0.175)', // --bs-box-shadow-lg
   ],
 });
@@ -138,6 +139,7 @@ const darkTheme = createTheme({
     'none',
     '0 0.5rem 1rem rgba(0, 0, 0, 0.15)', // --bs-box-shadow
     '0 0.125rem 0.25rem rgba(0, 0, 0, 0.075)', // --bs-box-shadow-sm
+    '0 1rem 3rem rgba(0, 0, 0, 0.175)', // --bs-box-shadow-lg
     '0 1rem 3rem rgba(0, 0, 0, 0.175)', // --bs-box-shadow-lg
   ],
 });
