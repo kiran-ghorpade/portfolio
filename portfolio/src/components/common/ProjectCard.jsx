@@ -14,20 +14,6 @@ import {
 } from "@mui/material";
 import { Link } from "react-router-dom";
 
-[
-  {
-    title: "Alternative Digital Registry For ASHA",
-    technologies: ["React", "Node.js", "MongoDB"],
-    image: "https://via.placeholder.com/300",
-    description:
-      "A web app that helps users track their income and expenses, with real-time data visualization.",
-    link: {
-      github: "https://github.com/example/personal-finance-tracker",
-      demo: "https://example.com/demo/personal-finance-tracker",
-    },
-  },
-];
-
 function ProjectCard({ project, direction }) {
   // Horizontal Card
   if (direction === "horizontal")
@@ -36,16 +22,16 @@ function ProjectCard({ project, direction }) {
         <CardMedia
           component="img"
           sx={{ width: 240 }}
-          image={project.image}
-          alt={project.title}
+          image={project?.image}
+          alt={project?.title}
         />
         <Stack>
           <CardContent>
             <Stack gap={2}>
               <Box>
-                <Typography variant="h6">{project.title}</Typography>
+                <Typography variant="h6">{project?.title}</Typography>
                 <Typography variant="body2" color="textSecondary">
-                  {project.description}
+                  {project?.description}
                 </Typography>
               </Box>
               <Box>
@@ -60,7 +46,7 @@ function ProjectCard({ project, direction }) {
           </CardContent>
           <Divider />
           <CardActions>
-            <IconButton LinkComponent={Link} to={project?.link?.github}>
+            <IconButton LinkComponent={Link} to={project?.links?.github}>
               <GitHub />
             </IconButton>
 
@@ -68,7 +54,7 @@ function ProjectCard({ project, direction }) {
               size="small"
               color="primary"
               LinkComponent={Link}
-              to={project.link.docs}
+              to={project?.links?.docs}
             >
               Docs
             </Button>
@@ -78,11 +64,17 @@ function ProjectCard({ project, direction }) {
                 size="small"
                 color="primary"
                 LinkComponent={Link}
-                to={project.link.demo}
+                to={project?.links?.demo}
               >
                 Demo
               </Button>
             )}
+              <Button
+                size="small"
+                color="primary"
+              >
+                More Info
+              </Button>
           </CardActions>
         </Stack>
       </Card>
@@ -94,13 +86,13 @@ function ProjectCard({ project, direction }) {
       <CardMedia
         component="img"
         height="150"
-        image={project.image}
-        alt={project.title}
+        image={project?.image}
+        alt={project?.title}
       />
       <CardContent>
-        <Typography variant="h6">{project.title}</Typography>
+        <Typography variant="h6">{project?.title}</Typography>
         <Typography variant="body2" color="textSecondary">
-          {project.description}
+          {project?.description}
         </Typography>
       </CardContent>
       <CardActions>
@@ -108,7 +100,7 @@ function ProjectCard({ project, direction }) {
           size="small"
           color="primary"
           LinkComponent={Link}
-          to={project.link}
+          to={project?.link}
         >
           View Project
         </Button>

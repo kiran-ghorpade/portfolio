@@ -1,22 +1,18 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
-import HomePage from "../components/pages/HomePage";
-import AboutPage from "../components/pages/AboutPage";
-import ProjectsPage from "../components/pages/ProjectsPage";
-import ContactPage from "../components/pages/ContactPage";
-import Layout from "./Layout";
 import NotFoundPage from "../components/pages/NotFoundPage";
+import Layout from "./Layout";
+import { routes } from "./Routes";
 
 function AppRoutes() {
   return (
     <Router future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
       <Routes>
-        <Route element={<Layout/>}>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/projects" element={<ProjectsPage />} />
-          <Route path="/contact" element={<ContactPage />} />
+        <Route element={<Layout />}>
+          {routes.map((route, index) => (
+            <Route key={index} path={route.path} element={route.component} />
+          ))}
         </Route>
-        <Route path="*" element={<NotFoundPage/>}/>
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </Router>
   );

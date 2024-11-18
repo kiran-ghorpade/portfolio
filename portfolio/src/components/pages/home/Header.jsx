@@ -30,28 +30,32 @@ function Header() {
       </Grid2>
 
       <Grid2 xs={12} sm={6} md={4} width={400}>
-        <Typography
-          variant="h2"
-          fontSize="1.75rem"
-          fontWeight=" 900"
-          letterSpacing=".1rem"
-        >
-          {personalInfo?.name?.firstName + " " + personalInfo?.name?.lastName}
-        </Typography>
-        <Typography variant="body1">
-          I&apos;m passionate about building software that solves problems and
-          learning new technologies every day
-        </Typography>
-        <Button
-          variant="contained"
-          sx={{ my: 2, gap: 2 }}
-          LinkComponent={Link}
-          to={
-            socialAccounts?.find((account) => account.name === "GitHub")?.link
-          }
-        >
-          <GitHub /> Let’s Collaborate
-        </Button>
+      <Grid2 marginBottom={3}>
+          <Typography
+            variant="h1"
+            fontSize="2.75rem"
+            fontWeight=" 900"
+            letterSpacing=".1rem"
+          >
+            {personalInfo?.name?.firstName + " " + personalInfo?.name?.lastName}
+          </Typography>
+          <Typography variant="h2" fontSize="1.25rem" letterSpacing=".1rem">
+            {personalInfo?.title}
+          </Typography>
+        </Grid2>
+        <Grid2>
+          <Typography variant="body1">{personalInfo?.description}</Typography>
+          <Button
+            variant="contained"
+            sx={{ my: 2, gap: 2 }}
+            LinkComponent={Link}
+            to={
+              socialAccounts?.find((account) => account.name === "GitHub")?.link
+            }
+          >
+            <GitHub /> Let’s Collaborate
+          </Button>
+        </Grid2>
       </Grid2>
     </Grid2>
   );

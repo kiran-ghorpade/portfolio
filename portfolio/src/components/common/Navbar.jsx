@@ -1,45 +1,62 @@
-import { AppBar, Button, IconButton, List, useTheme } from "@mui/material";
 import { DarkMode, LightMode } from "@mui/icons-material";
+import { AppBar, Button, Stack, useTheme } from "@mui/material";
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { routes } from "../../routes/Routes";
 import { DarkModeContext } from "../../services/context/DarkModeContextProvider";
 
 function Navbar() {
   const theme = useTheme();
-  const { isDarkMode, setIsDarkMode } = useContext(DarkModeContext);
+  const location = useLocation();
+  const { isDarkMode, toggleDarkMode } = useContext(DarkModeContext);
 
-  const toggleDarkMode = () => {
-    isDarkMode ? setIsDarkMode(false) : setIsDarkMode(true);
-  };
+  const NavButtons = () => (
+    <>
+      {routes
+        ?.filter((route) => {
+          return route.type === "navgation";
+        })
+        ?.map((nav, index) => (
+          <Button
+            key={index}
+            size="small"
+            color={location?.pathname === nav?.path ? "primary" : "secondary"}
+            LinkComponent={Link}
+            to={nav?.path}
+          >
+            {nav.title}
+          </Button>
+        ))}
+    </>
+  );
 
   return (
     <AppBar
       elevation={0}
-      sx={{ bgcolor: theme.palette.background.default, backgroundImage: "none" }}
+      sx={{
+        bgcolor: theme.palette.background.default,
+        backgroundImage: "none",
+      }}
     >
-      <List
-        sx={{
-          listStyle: "none",
-          display: "flex",
-          justifyContent: "center",
-        }}
+      <Stack
+        direction="row"
+        justifyContent="center"
+        padding={1}
+        sx={{ paddingX: { xs: 2 } }}
       >
-        <Link to="/">
-          <Button color="primary">Home</Button>
-        </Link>
-        <Link to="/about">
-          <Button color="primary">About</Button>
-        </Link>
-        <Link to="/projects">
-          <Button color="primary">Projects</Button>
-        </Link>
-        <Link to="/contact">
-          <Button color="primary">contact</Button>
-        </Link>
-        <IconButton color="primary" size="small" onClick={toggleDarkMode}>
-          {isDarkMode ? <LightMode /> : <DarkMode />}
-        </IconButton>
-      </List>
+        <NavButtons />
+        <Button
+          size="small"
+          onClick={toggleDarkMode}
+          color={isDarkMode ? "secondary" : "primary"}
+        >
+          {isDarkMode ? (
+            <LightMode fontSize="small" />
+          ) : (
+            <DarkMode fontSize="small" />
+          )}
+        </Button>
+      </Stack>
     </AppBar>
   );
 }

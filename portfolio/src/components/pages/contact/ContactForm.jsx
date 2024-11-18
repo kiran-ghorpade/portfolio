@@ -21,7 +21,7 @@ function ContactForm() {
       textAlign="center"
       alignItems="center"
       justifyContent="center"
-      mt={{ xs: 0, md: 5 }}
+      mt={{ xs: 0 }}
     >
       <SectionHead>Contact me</SectionHead>
       <Card sx={{ maxWidth: 500 }}>

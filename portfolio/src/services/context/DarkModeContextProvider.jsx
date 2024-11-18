@@ -14,8 +14,12 @@ function DarkModeContextProvider({ children }) {
   // Toggle between light and dark themes
   const theme = isDarkMode ? darkTheme : lightTheme;
 
+  const toggleDarkMode = () => {
+    isDarkMode ? setIsDarkMode(false) : setIsDarkMode(true);
+  };
+
   return (
-    <DarkModeContext.Provider value={{ isDarkMode, setIsDarkMode }}>
+    <DarkModeContext.Provider value={{ isDarkMode, toggleDarkMode }}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
         {children}

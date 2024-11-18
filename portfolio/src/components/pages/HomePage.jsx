@@ -3,7 +3,6 @@ import About from "./home/About";
 import Header from "./home/Header";
 import Skills from "./home/Skills";
 import Contact from "./home/Contact";
-import PortfolioStats from "./PortfolioStats";
 import Projects from "./home/Projects";
 
 function HomePage() {
@@ -15,7 +14,6 @@ function HomePage() {
         <Projects />
         <Skills />
         <Contact />
-        <PortfolioStats />
       </Stack>
     </Container>
   );

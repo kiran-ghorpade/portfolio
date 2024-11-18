@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { createContext } from "react";
-import useFetchInformation from "../hooks/usePersonalInformation";
+import useFetchInformation from "../hooks/useFetchInformation";
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const InformationContext = createContext();

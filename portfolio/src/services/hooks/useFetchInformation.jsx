@@ -6,7 +6,7 @@ import {
   fetchLanguagesInfo,
   fetchPersonalInfo,
   fetchProjectsInfo,
-  fetchSkillSet,
+  fetchSkills,
   fetchSocialAccountInfo,
 } from "../api/requests";
 
@@ -44,7 +44,7 @@ function useFetchInformation() {
           fetchHobbiesInfo(),
           fetchEducationInfo(),
           fetchProjectsInfo(),
-          fetchSkillSet(),
+          fetchSkills(),
           fetchCertificationsInfo(),
         ]);
 

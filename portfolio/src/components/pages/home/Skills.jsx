@@ -8,18 +8,22 @@ import { InformationContext } from "../../../services/context/InformationContext
 function Skills() {
   const { skills } = useContext(InformationContext);
 
-
   return (
     <Section>
       <Stack alignItems="center" spacing={2}>
         <SectionHead>Skills</SectionHead>
 
         <Grid2 container spacing={4} justifyContent="center" marginY={5}>
-          {skills?.programmingLanguages?.map((skill, index) => (
-            <Grid2 xs={12} sm={8} md={4} key={index}>
-              <SkillIcon src={skill.icon} alt={skill.name} />
-            </Grid2>
-          ))}
+          {skills
+            ?.filter((skill) => { return skill.values.level === "Intermediate"})
+            .slice(0, 4)
+            .map((skill) =>
+              skill?.values?.map((value, index) => (
+                <Grid2 xs={12} sm={8} md={4} key={index}>
+                  <SkillIcon src={value.image} alt={value.name} />
+                </Grid2>
+              ))
+            )}
         </Grid2>
 
         <Typography variant="body2" maxWidth={700} textAlign="center">
