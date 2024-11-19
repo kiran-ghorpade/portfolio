@@ -1,4 +1,5 @@
 import AboutPage from "../components/pages/AboutPage";
+import CertificationsPage from "../components/pages/CertificationsPage";
 import ContactPage from "../components/pages/ContactPage";
 import HomePage from "../components/pages/HomePage";
 import PortfolioPage from "../components/pages/PortfolioPage";
@@ -27,6 +28,12 @@ export const routes = [
     type: "navgation",
     path: "/skills",
     component: <SkillsPage />,
+  },
+  {
+    title: "Certifications",
+    type: "navgation",
+    path: "/certifications",
+    component: <CertificationsPage />,
   },
   {
     title: "Contact",

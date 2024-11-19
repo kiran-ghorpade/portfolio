@@ -14,7 +14,7 @@ import {
 } from "@mui/material";
 import { Link } from "react-router-dom";
 
-function ProjectCard({ project, direction }) {
+function ProjectCard({ project, direction, handleCardClick }) {
   // Horizontal Card
   if (direction === "horizontal")
     return (
@@ -72,6 +72,7 @@ function ProjectCard({ project, direction }) {
               <Button
                 size="small"
                 color="primary"
+                onClick={()=>handleCardClick(project)}
               >
                 More Info
               </Button>
