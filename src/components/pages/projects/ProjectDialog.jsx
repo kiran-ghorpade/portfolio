@@ -3,21 +3,20 @@ import { GitHub } from "@mui/icons-material";
 import {
   Box,
   Button,
-  Card,
   CardActions,
   CardContent,
   CardMedia,
-  Dialog,
   Divider,
   IconButton,
   Stack,
-  Typography,
+  Typography
 } from "@mui/material";
 import { Link } from "react-router-dom";
+import Dialog from "../../common/Dialog";
 
-function ProjectCard({ project }) {
+function ProjectDialog({ project, open, handleCardClick }) {
   return (
-    <Card elevation={1}>
+    <Dialog open={open} handleClose={handleCardClick} value={project}>
       <Stack padding={1}>
         <CardMedia
           component="img"
@@ -69,16 +68,8 @@ function ProjectCard({ project }) {
           )}
         </CardActions>
       </Stack>
-    </Card>
-  );
-}
-
-function Project({ project, open, handleCardClick }) {
-  return (
-    <Dialog open={open} onClose={handleCardClick}>
-      <ProjectCard project={project} />
     </Dialog>
   );
 }
 
-export default Project;
+export default ProjectDialog;

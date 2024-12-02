@@ -16,10 +16,11 @@ function InformationContextProvider({ children }) {
     projects,
     skills,
     certifications,
+    repositoryInfo,
     loading,
     error,
   } = useFetchInformation();
-
+  
   return (
     <InformationContext.Provider
       value={{
@@ -31,6 +32,7 @@ function InformationContextProvider({ children }) {
         projects,
         skills,
         certifications,
+        repositoryInfo,
         loading,
         error,
       }}
@@ -40,4 +42,4 @@ function InformationContextProvider({ children }) {
   );
 }
 
-export default  InformationContextProvider;
+export default InformationContextProvider;

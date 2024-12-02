@@ -6,7 +6,8 @@
   },
   "title": "Computer Science Student",
   "type": "Personal Information",
-  "description": " Passionate about learning new technologies and solving complex problems with code.",
+  "description": "Passionate about learning new technologies and solving complex problems with code.",
+  "about": "I’m currently persuing my Master’s in Computer Applications at Savitribai Phule Pune University, where I’ve gained a strong foundation in software development, AI, and data analytics. I’m always looking for ways to apply my skills in innovative ways.",
   "image": "/public/assets/images/kiran/Kiran_Image2.jpg",
   "contact": {
     "email": "kiran.ghorpade@example.com",

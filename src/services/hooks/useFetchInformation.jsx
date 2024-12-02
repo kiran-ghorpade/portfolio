@@ -6,6 +6,7 @@ import {
   fetchLanguagesInfo,
   fetchPersonalInfo,
   fetchProjectsInfo,
+  fetchRepositoryInfo,
   fetchSkills,
   fetchSocialAccountInfo,
 } from "../api/requests";
@@ -19,13 +20,13 @@ function useFetchInformation() {
   const [projects, setProjects] = useState(null);
   const [skills, setSkills] = useState(null);
   const [certifications, setCertifications] = useState(null);
+  const [repositoryInfo, setRepositoryInfo] = useState(null);
 
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
-
       try {
         setLoading(true);
         const [
@@ -37,6 +38,7 @@ function useFetchInformation() {
           projectsData,
           skillsData,
           certificationsData,
+          repositoryInfo,
         ] = await Promise.all([
           fetchPersonalInfo(),
           fetchSocialAccountInfo(),
@@ -46,8 +48,9 @@ function useFetchInformation() {
           fetchProjectsInfo(),
           fetchSkills(),
           fetchCertificationsInfo(),
+          fetchRepositoryInfo(),
         ]);
-
+        
         setPersonalInfo(personalInfoData);
         setSocialAccounts(socialAccountsData);
         setLanguages(languagesData);
@@ -56,6 +59,7 @@ function useFetchInformation() {
         setProjects(projectsData);
         setSkills(skillsData);
         setCertifications(certificationsData);
+        setRepositoryInfo(repositoryInfo);
       } catch (error) {
         setError(error);
       } finally {
@@ -76,6 +80,7 @@ function useFetchInformation() {
     projects,
     skills,
     certifications,
+    repositoryInfo,
     loading,
     error,
   };

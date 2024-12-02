@@ -9,6 +9,7 @@ const requestLink = {
   Skills: "/config/skills.json",
   Projects: "/config/projects.json",
   Certifications: "/config/certifications.json",
+  Repository: "https://api.github.com/repos/kiran-ghorpade/portfolio",
 };
 
 
@@ -95,3 +96,18 @@ export async function fetchCertificationsInfo() {
     return console.error("Error Loading Information ", err);
   }
 }
+
+
+// ---------------------------------------------------------------------
+//  About Portfolio
+// ---------------------------------------------------------------------
+export async function fetchRepositoryInfo() {
+  try {
+    const response = await fetch(requestLink.Repository);
+    return await response.json();
+  } catch (err) {
+    return console.error("Error Loading Information ", err);
+  }
+}
+
+

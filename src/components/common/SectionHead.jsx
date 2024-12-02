@@ -5,11 +5,10 @@ function SectionHead({ children }) {
   return (
     <Typography
       variant="h5"
-      fontSize="1.75rem"
-      fontWeight=" 900"
+      fontSize="0.8rem"
+      // fontWeight=" 900"
       letterSpacing=".1rem"
-      my={5}
-      py={2}
+      my={1}
     >
       {children}
     </Typography>

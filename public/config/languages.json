@@ -1,11 +1,14 @@
 [
-    {
-      "language": "English",
-      "proficiency": "Native"
-    },
-    {
-      "language": "Spanish",
-      "proficiency": "Intermediate"
-    }
-  ]
-  
+  {
+    "language": "Marathi",
+    "proficiency": "Native"
+  },
+  {
+    "language": "Hindi",
+    "proficiency": "Intermediate"
+  },
+  {
+    "language": "English",
+    "proficiency": "Intermediate"
+  }
+]

@@ -5,18 +5,18 @@ import {
   Card,
   CardContent,
   CardMedia,
-  Dialog,
   Divider,
   List,
   ListItem,
   ListItemIcon,
   ListItemText,
   Stack,
-  Typography,
+  Typography
 } from "@mui/material";
 import { useContext, useState } from "react";
 import { InformationContext } from "../../../services/context/InformationContextProvider";
-import Project from "../projects/Project";
+import Dialog from "../../common/Dialog";
+import Project from "../projects/ProjectDialog";
 // import ProjectCard from "../common/ProjectCard";
 
 function SkillCard({ skill, handleProjectClick }) {
@@ -84,7 +84,7 @@ function SkillCard({ skill, handleProjectClick }) {
   );
 }
 
-function Skill({ skill, open, handleCardClick }) {
+function SkillDialog({ skill, open, handleCardClick }) {
   const [openProjectDialog, setOpenProjectDialog] = useState(false);
   const [project, setProject] = useState({});
 
@@ -94,15 +94,15 @@ function Skill({ skill, open, handleCardClick }) {
   };
 
   return (
-    <Dialog open={open} onClose={handleCardClick}>
-      <SkillCard skill={skill} handleProjectClick={handleProjectClick} />
-      <Project
-        open={openProjectDialog}
-        project={project}
-        handleCardClick={handleProjectClick}
-      />
+    <Dialog open={open} handleClose={handleCardClick} value={skill}>
+        <SkillCard skill={skill} handleProjectClick={handleProjectClick} />
+        <Project
+          open={openProjectDialog}
+          project={project}
+          handleCardClick={handleProjectClick}
+        />
     </Dialog>
   );
 }
 
-export default Skill;
+export default SkillDialog;

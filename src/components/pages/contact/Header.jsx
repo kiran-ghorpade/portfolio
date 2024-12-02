@@ -16,7 +16,7 @@ function Header() {
       <Section>
         <Grid2 container spacing={4}>
           {socialAccounts.map((account, index) => (
-            <Grid2 item xs={12} sm={8} md={4} key={index}>
+            <Grid2  xs={12} sm={8} md={4} key={index}>
               <SocialLink socialAccount={account} />
             </Grid2>
           ))}

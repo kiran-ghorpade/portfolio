@@ -1,17 +1,34 @@
-import { Container, Stack, Typography } from "@mui/material";
+import { Card, Container, Stack, Typography } from "@mui/material";
 import Section from "../common/Section";
 import SectionHead from "../common/SectionHead";
+import { useContext } from "react";
+import { InformationContext } from "../../services/context/InformationContextProvider";
 
 function PortfolioPage() {
+  const { repositoryInfo } = useContext(InformationContext);
+
   return (
     <Container>
       <Stack spacing={4}>
         <Section>
-          <Stack alignItems="center" spacing={2}>
+          <Stack alignItems="center" spacing={2} textAlign="center">
             <SectionHead>Portfolio Information</SectionHead>
-            <Typography>Version : 2.0.0</Typography>
-            <Typography>Date of Creation : 10th November 2024</Typography>
-            <Typography>Last Update : 14th November 2024</Typography>
+            <Card>
+              <Typography variant="h6">Description</Typography>
+              <Typography variant="subtitle1" width="80%">
+                {repositoryInfo?.description || " No Description Found"}
+              </Typography>
+            </Card>
+            <Typography variant="h6">Date of Creation</Typography>
+            <Typography>
+              {new Date(repositoryInfo?.created_at).toLocaleString() ||
+                " No Date Found"}
+            </Typography>
+            <Typography variant="h6">Last Update :</Typography>
+            <Typography>
+              {new Date(repositoryInfo?.pushed_at).toLocaleString() ||
+                " No Date Found"}
+            </Typography>
           </Stack>
         </Section>
 
@@ -23,6 +40,7 @@ function PortfolioPage() {
             <Typography>Material UI</Typography>
             <Typography>BootStrap Theme</Typography>
             <Typography>React Router Dom</Typography>
+            <Typography>AOS</Typography>
           </Stack>
         </Section>
       </Stack>

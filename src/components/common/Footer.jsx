@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function Footer() {
   return (
-    <Box textAlign="center" my={3}>
+    <Box textAlign="center" my={2} mb={{ xs: 10 }}>
       <Link to="/portfolio">
         <Typography variant="body2" color="textSecondary">
           About Portfolio

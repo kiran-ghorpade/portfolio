@@ -14,7 +14,7 @@ import SectionHead from "../common/SectionHead";
 // import ProjectCard from "../common/ProjectCard";
 import { useContext, useState } from "react";
 import { InformationContext } from "../../services/context/InformationContextProvider";
-import Skill from "./skills/Skill";
+import SkillDialog from "./skills/Skill";
 
 function SkillCard({ skill, direction, handleCardClick }) {
   // Horizontal Card
@@ -102,7 +102,7 @@ function SkillsPage() {
           )}
         </Grid2>
 
-        <Skill
+        <SkillDialog
           skill={skill}
           open={openSkillDialog}
           handleCardClick={handleCardClick}

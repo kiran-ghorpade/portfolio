@@ -14,23 +14,26 @@ import {
 import { Link } from "react-router-dom";
 import CardHorizontal from "../../common/CardHorizontal";
 
-function ProjectCard({ project, handleCardClick }) {
+function CertificationCard({ project, handleCardClick }) {
+  // Horizontal Card
   return (
     <CardHorizontal>
       <CardMedia
         component="img"
-        sx={{ width: 300 }}
+        sx={{ width: 250 }}
         image={project?.image}
         alt={project?.title}
       />
       <Stack>
-        <CardContent maxWidth={500}>
-            <Box padding={2} >
+        <CardContent>
+          <Stack gap={1} padding={2}>
+            <Box>
               <Typography variant="h6">{project?.title}</Typography>
               <Typography variant="body2" color="textSecondary">
                 {project?.description}
               </Typography>
             </Box>
+          </Stack>
         </CardContent>
         <Divider />
         <CardActions>
@@ -70,4 +73,4 @@ function ProjectCard({ project, handleCardClick }) {
   );
 }
 
-export default ProjectCard;
+export default CertificationCard;

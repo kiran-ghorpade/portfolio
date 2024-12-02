@@ -1,9 +1,9 @@
 import { Container, Grid2, Stack } from "@mui/material";
 import SectionHead from "../common/SectionHead";
-import ProjectCard from "../common/ProjectCard";
+import ProjectCard from "./projects/ProjectCard";
 import { useContext, useState } from "react";
 import { InformationContext } from "../../services/context/InformationContextProvider";
-import Project from "./projects/Project";
+import ProjectDialog from "./projects/ProjectDialog";
 
 function ProjectsPage() {
   const { projects } = useContext(InformationContext);
@@ -19,7 +19,7 @@ function ProjectsPage() {
       <Stack alignItems="center" spacing={4}>
         <SectionHead>Projects</SectionHead>
 
-        <Grid2 container spacing={4} justifyContent="center">
+        <Grid2 container spacing={2} direction='column'>
           {projects?.map((project, index) => (
             <Grid2 xs={6} sm={8} md={3} key={index}>
               <ProjectCard
@@ -31,7 +31,7 @@ function ProjectsPage() {
           ))}
         </Grid2>
 
-        <Project
+        <ProjectDialog
           open={openProjectDialog}
           project={project}
           handleCardClick={handleCardClick}

@@ -3,7 +3,7 @@
     "type": "Programming Languages",
     "values": [
       {
-        "name": "JavaScript",
+        "name": "Javascript",
         "level": "Intermediate",
         "description": "Proficient in JavaScript for both front-end and back-end development using modern frameworks and libraries like React, Node.js, and Express.",
         "points": [
