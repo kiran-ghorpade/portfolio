@@ -43,9 +43,6 @@ function Navbar() {
   const Bar = ({ children }) => {
     return isMobile ? (
       <BottomNavigation
-        // showLabels
-        // value={value}
-        // onChange={(event, newValue) => setValue(newValue)}
         sx={{
           zIndex: theme.zIndex.drawer + 10,
           width: "100%",

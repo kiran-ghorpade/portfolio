@@ -65,14 +65,7 @@ const lightTheme = createTheme({
   shape: {
     borderRadius: "0.375rem", // --bs-border-radius
   },
-  // shadows: [
-  //   "none",
-  //   "0 0.5rem 1rem rgba(0, 0, 0, 0.15)", // --bs-box-shadow
-  //   "0 0.125rem 0.25rem rgba(0, 0, 0, 0.075)", // --bs-box-shadow-sm
-  //   "0 1rem 3rem rgba(0, 0, 0, 0.175)", // --bs-box-shadow-lg
-  //   "0 1rem 3rem rgba(0, 0, 0, 0.175)", // --bs-box-shadow-lg
-  //   Array(20).fill("none"),
-  // ],
+
 });
 
 // Define the dark theme
@@ -136,14 +129,6 @@ const darkTheme = createTheme({
   shape: {
     borderRadius: "0.375rem", // --bs-border-radius
   },
-  // shadows: [
-  //   "none",
-  //   "0 0.5rem 1rem rgba(0, 0, 0, 0.15)", // --bs-box-shadow
-  //   "0 0.125rem 0.25rem rgba(0, 0, 0, 0.075)", // --bs-box-shadow-sm
-  //   "0 1rem 3rem rgba(0, 0, 0, 0.175)", // --bs-box-shadow-lg
-  //   "0 1rem 3rem rgba(0, 0, 0, 0.175)", // --bs-box-shadow-lg
-  //   Array(25).fill("0 1rem 3rem rgba(0, 0, 0, 0.175)"),
-  // ],
 });
 
 export { lightTheme, darkTheme };

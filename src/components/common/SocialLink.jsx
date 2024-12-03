@@ -2,25 +2,24 @@
 
 import { IconButton, useTheme } from "@mui/material";
 
-function SocialLink({ socialAccount }) {
+function SocialLink({ socialAccount, color, borderRadius }) {
   const theme = useTheme();
-
   return (
     <a href={socialAccount?.link} target="_blank">
       <IconButton
-        color={theme.palette.primary.main}
+        color={color}
         sx={{
           width: "40px",
           height: "40px",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          borderRadius: "10%",
-          background: theme.palette.common.white,
+          borderRadius: borderRadius,
+          background: theme.palette.grey.A400,
         }}
       >
         <img
-          height={30}
+          height={20}
           width={30}
           style={{ marginTop: 2 }}
           src={socialAccount?.icon}

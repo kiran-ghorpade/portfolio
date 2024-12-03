@@ -19,9 +19,9 @@ function ProjectsPage() {
       <Stack alignItems="center" spacing={4}>
         <SectionHead>Projects</SectionHead>
 
-        <Grid2 container spacing={2} direction='column'>
+        <Grid2 container spacing={1}>
           {projects?.map((project, index) => (
-            <Grid2 xs={6} sm={8} md={3} key={index}>
+            <Grid2 size={{ md: 6, xs: 12 }} key={index}>
               <ProjectCard
                 direction="horizontal"
                 project={project}

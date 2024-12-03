@@ -7,7 +7,7 @@ function Layout() {
   return (
     <Container sx={{ mt: 5 }}>
       <Navbar />
-      <Box my={8}>
+      <Box my={{md:8, xs:5}}>
         <Outlet />
       </Box>
       <Footer />

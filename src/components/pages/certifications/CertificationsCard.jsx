@@ -14,26 +14,27 @@ import {
 import { Link } from "react-router-dom";
 import CardHorizontal from "../../common/CardHorizontal";
 
-function CertificationCard({ project, handleCardClick }) {
-  // Horizontal Card
+function CertificationsCard({ project, handleCardClick }) {
   return (
     <CardHorizontal>
       <CardMedia
         component="img"
-        sx={{ width: 250 }}
+        sx={{
+          width: { md: 250 }, // Set width for different screen sizes
+          objectFit: "cover",
+          p: 2,
+        }}
         image={project?.image}
         alt={project?.title}
       />
-      <Stack>
+      <Stack width="100%">
         <CardContent>
-          <Stack gap={1} padding={2}>
-            <Box>
-              <Typography variant="h6">{project?.title}</Typography>
-              <Typography variant="body2" color="textSecondary">
-                {project?.description}
-              </Typography>
-            </Box>
-          </Stack>
+          <Box minHeight={150}>
+            <Typography variant="h6">{project?.title}</Typography>
+            <Typography variant="body2" color="textSecondary">
+              {project?.description}
+            </Typography>
+          </Box>
         </CardContent>
         <Divider />
         <CardActions>
@@ -45,6 +46,7 @@ function CertificationCard({ project, handleCardClick }) {
             size="small"
             color="primary"
             LinkComponent={Link}
+            target="_blank"
             to={project?.links?.docs}
           >
             Docs
@@ -55,6 +57,7 @@ function CertificationCard({ project, handleCardClick }) {
               size="small"
               color="primary"
               LinkComponent={Link}
+              target="_blank"
               to={project?.links?.demo}
             >
               Demo
@@ -73,4 +76,4 @@ function CertificationCard({ project, handleCardClick }) {
   );
 }
 
-export default CertificationCard;
+export default CertificationsCard;

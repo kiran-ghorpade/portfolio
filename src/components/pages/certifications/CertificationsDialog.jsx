@@ -14,10 +14,10 @@ import {
 import { Link } from "react-router-dom";
 import Dialog from "../../common/Dialog";
 
-function ProjectDialog({ project, open, handleCardClick }) {
+function CertificationsDialog({ project, open, handleCardClick }) {
   return (
     <Dialog open={open} handleClose={handleCardClick} value={project}>
-      <Stack alignItems="center ">
+      <Stack alignItems="center">
         <CardMedia
           component="img"
           sx={{
@@ -45,36 +45,36 @@ function ProjectDialog({ project, open, handleCardClick }) {
           </Box>
           <Divider />
         </CardContent>
-        <CardActions>
-          <IconButton LinkComponent={Link} to={project?.links?.github}>
-            <GitHub />
-          </IconButton>
+      </Stack>
+      <CardActions>
+        <IconButton LinkComponent={Link} to={project?.links?.github}>
+          <GitHub />
+        </IconButton>
 
+        <Button
+          size="small"
+          color="primary"
+          LinkComponent={Link}
+          target="__blank"
+          to={project?.links?.docs}
+        >
+          Docs
+        </Button>
+
+        {project?.link?.demo && (
           <Button
             size="small"
             color="primary"
             LinkComponent={Link}
             target="__blank"
-            to={project?.links?.docs}
+            to={project?.links?.demo}
           >
-            Docs
+            Demo
           </Button>
-
-          {project?.link?.demo && (
-            <Button
-              size="small"
-              color="primary"
-              LinkComponent={Link}
-              target="__blank"
-              to={project?.links?.demo}
-            >
-              Demo
-            </Button>
-          )}
-        </CardActions>
-      </Stack>
+        )}
+      </CardActions>
     </Dialog>
   );
 }
 
-export default ProjectDialog;
+export default CertificationsDialog;

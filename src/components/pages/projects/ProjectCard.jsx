@@ -19,18 +19,22 @@ function ProjectCard({ project, handleCardClick }) {
     <CardHorizontal>
       <CardMedia
         component="img"
-        sx={{ width: 300 }}
+        sx={{
+          width: { md: 250 }, // Set width for different screen sizes
+          objectFit: "cover",
+          p: 2,
+        }}
         image={project?.image}
         alt={project?.title}
       />
-      <Stack>
-        <CardContent maxWidth={500}>
-            <Box padding={2} >
-              <Typography variant="h6">{project?.title}</Typography>
-              <Typography variant="body2" color="textSecondary">
-                {project?.description}
-              </Typography>
-            </Box>
+      <Stack width="100%">
+        <CardContent>
+          <Box minHeight={100}>
+            <Typography variant="h6">{project?.title}</Typography>
+            <Typography variant="body2" color="textSecondary">
+              {project?.description}
+            </Typography>
+          </Box>
         </CardContent>
         <Divider />
         <CardActions>
@@ -42,6 +46,7 @@ function ProjectCard({ project, handleCardClick }) {
             size="small"
             color="primary"
             LinkComponent={Link}
+            target="__blank"
             to={project?.links?.docs}
           >
             Docs
@@ -52,6 +57,7 @@ function ProjectCard({ project, handleCardClick }) {
               size="small"
               color="primary"
               LinkComponent={Link}
+              target="__blank"
               to={project?.links?.demo}
             >
               Demo

@@ -22,6 +22,7 @@ function ContactForm() {
       alignItems="center"
       justifyContent="center"
       mt={{ xs: 0 }}
+      data-aos="fade-up"
     >
       <SectionHead>Contact me</SectionHead>
       <Card sx={{ maxWidth: 500 }}>

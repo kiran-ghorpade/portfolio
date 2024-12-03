@@ -5,7 +5,14 @@ import Header from "./contact/Header";
 function ContactPage() {
   return (
     <Container>
-      <Stack direction='row' gap={2} flexWrap='wrap' justifyContent='space-around'>
+      <Stack
+        direction="row"
+        height={{ md: "70vh" }}
+        gap={2}
+        flexWrap="wrap"
+        alignItems="center"
+        justifyContent="space-around"
+      >
         <ContactForm />
         <Header />
       </Stack>

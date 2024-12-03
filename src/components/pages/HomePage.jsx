@@ -10,6 +10,7 @@ import {
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { InformationContext } from "../../services/context/InformationContextProvider";
+import SocialLink from "../common/SocialLink";
 
 function HomePage() {
   const { personalInfo, socialAccounts } = useContext(InformationContext);
@@ -21,10 +22,13 @@ function HomePage() {
         textAlign="center"
         alignItems="center"
         justifyContent="space-around"
-        height={{ md: "60vh", xs: "64vh" }}
+        wrap="wrap"
+        // direction='column'
+        height={{ md: "70vh" }}
+        gap={2}
         data-aos="zoom-in-up"
       >
-        <Grid2 xs={12} sm={6} md={8}>
+        <Grid2 size={6} container justifyContent='center'>
           <IconButton>
             <Avatar
               alt="My Image"
@@ -38,8 +42,14 @@ function HomePage() {
           </IconButton>
         </Grid2>
 
-        <Grid2 xs={12} sm={6} md={4} width={400}>
-          <Grid2 marginBottom={3}>
+        <Grid2
+          size={6}
+          container
+          justifyContent="center"
+          spacing={2}
+          width={400}
+        >
+          <Grid2>
             <Typography
               variant="h1"
               fontSize="2.75rem"
@@ -48,15 +58,15 @@ function HomePage() {
             >
               {personalInfo?.name?.firstName +
                 " " +
-                personalInfo?.name?.lastName}
+                personalInfo?.name?.lastName || "Name"}
             </Typography>
             <Typography variant="h2" fontSize="1.25rem" letterSpacing=".1rem">
-              {personalInfo?.title}
+              {personalInfo?.title || "Title"}
             </Typography>
           </Grid2>
           <Grid2>
             <Typography variant="body1">
-              {personalInfo?.description || "Hello"}
+              {personalInfo?.description || "No Discription"}
             </Typography>
 
             <Button
@@ -71,6 +81,13 @@ function HomePage() {
             >
               <GitHub /> Let’s Collaborate
             </Button>
+          </Grid2>
+          <Grid2 size={12} container justifyContent="center" spacing={4}>
+            {socialAccounts?.slice(0, 3)?.map((account, index) => (
+              <Grid2 xs={12} sm={8} md={4} key={index}>
+                <SocialLink socialAccount={account} borderRadius="50%" />
+              </Grid2>
+            ))}
           </Grid2>
         </Grid2>
       </Grid2>
