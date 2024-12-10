@@ -1,45 +1,39 @@
-name: Deploy Vite App to GitHub Pages
+name: Deploy to GitHub Pages
 
 on:
   push:
     branches:
-      - react_app  # Branch with the source code
-  workflow_dispatch:  # Allow manual trigger
+      - react_app # Run the workflow when changes are pushed to the `react_app` branch
+  workflow_dispatch: # Allow manual trigger
 
 permissions:
-  contents: write
+  contents: write # Permission to write to this repository for main branch
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-    # Step 1: Checkout the code
-    - name: Checkout code
-      uses: actions/checkout@v3
+      # Step 1: Checkout the code from the source branch
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-    # Step 2: Check if build is needed
-    - name: Check if build is needed
-      run: |
-        git fetch origin main
-        git diff --quiet origin/main -- ./src ./public || exit 1
+      # Step 2: Set up Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20 # Use the required Node.js version
 
-    # Step 3: Set up Node.js
-    - name: Set up Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: 20
+      # Step 3: Install dependencies and build the project
+      - name: Install dependencies and build
+        run: |
+          npm ci
+          npm run build
 
-    # Step 4: Install dependencies and build
-    - name: Install dependencies and build
-      run: |
-        npm ci
-        npm run build
-
-    # Step 5: Deploy to GitHub Pages (main branch)
-    - name: Deploy to main branch
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_branch: main
-        publish_dir: dist  # Vite's default output folder
+      # Step 4: Deploy the build folder to the main branch
+      - name: Deploy to main branch
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: main
+          publish_dir: dist
