@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - react_app   # Run the workflow when changes are pushed to the `react_app` branch
+      
+permissions:
+  contents: write  # Permission to write to this repository for main branch
 
 jobs:
   build-and-deploy:
