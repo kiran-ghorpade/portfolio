@@ -1,0 +1,35 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - react_app   # Run the workflow when changes are pushed to the `react_app` branch
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Step 1: Checkout the code from the source branch
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    # Step 2: Set up Node.js
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 20 # Use the required Node.js version
+
+    # Step 3: Install dependencies and build the project
+    - name: Install dependencies and build
+      run: |
+        npm ci
+        npm run build
+
+    # Step 4: Deploy the build folder to the main branch
+    - name: Deploy to main branch
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_branch: main
+        publish_dir: build
