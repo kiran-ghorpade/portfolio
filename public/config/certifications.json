@@ -5,7 +5,7 @@
     "duration": "Jan 2024 - May 2023 ",
     "abstract": "CyberSecurity",
     "description": "Learn the fundamentals of cybersecurity and how to protect yourself and your organization from cyber threats.",
-    "image": "/assets/images/certificates/Google Cybersecurity.png"
+    "image": "/portfolio/assets/images/certificates/Google Cybersecurity.png"
   },
   {
     "title": "Infosys Full Stack Web Development",
@@ -13,7 +13,7 @@
     "duration": "Aug 2023 - Dec 2023",
     "abstract": "Web Development",
     "description": "Learn the fundamentals of web development and how to build a full stack web application.",
-    "image": "/assets/images/certificates/Infosys Full Stack Web Development.png"
+    "image": "/portfolio/assets/images/certificates/Infosys Full Stack Web Development.png"
   },
   {
     "title": "UIPath Automation",
@@ -21,6 +21,6 @@
     "duration": "Feb 2024 - Jun 2024",
     "abstract": "Automation",
     "description": "Learn the fundamentals of automation and how to automate tasks using UIPath.",
-    "image": "/assets/images/certificates/UIPath Automation.png"
+    "image": "/portfolio/assets/images/certificates/UIPath Automation.png"
   }
 ]
