@@ -2,7 +2,7 @@
   {
     "title": "Alternative Digital Registry For ASHA",
     "technologies": ["C#", ".NET", "Winforms", "SQLite"],
-    "image": "/assets/images/project/adrasha/FlashScreen.png",
+    "image": "/portfolio/assets/images/project/adrasha/FlashScreen.png",
     "abstract":"Desktop Prototype for Project ADRASHA",
     "description": "The 'ADRASHA Desktop Prototype' is Final Year Project for Bachelor of Computer Science Course of Shivaji University. The ADRASHA will provide an effective way to manage the Accredited Social Health Activist program in India. The system will automate various processes, reducing the workload of ASHA and improving the efficiency of the program. The system will also provide a more accurate way of tracking and monitoring beneficiaries, ensuring that they receive the necessary healthcare services.",
     "links": {
@@ -13,7 +13,7 @@
   {
     "title": "Inspirational India",
     "technologies": ["React", "SpringBoot", "Java", "Javascript"],
-    "image": "/assets/images/project/adrasha/FlashScreen.png",
+    "image": "/portfolio/assets/images/project/adrasha/FlashScreen.png",
     "abstract":"Blogging Website",
     "description": "A react webapp which provides information of Indian Tribes. Used Java language for backend using Springboot Framework.",
     "links": {
@@ -24,7 +24,7 @@
   {
     "title": "Portfolio",
     "technologies": ["React", "Material UI", "Javascript"],
-    "image": "/assets/images/project/portfolio/portfolio_home.png",
+    "image": "/portfolio/assets/images/project/portfolio/portfolio_home.png",
     "abstract": "Personal Portfolio Website built to showcase skills and projects",
     "description": "Personal Portfolio Website built using react and material ui which presents my skills and projects",
     "links": {
