@@ -3,28 +3,28 @@
     "name": "LinkedIn",
     "type": "Social Platform",
     "description": "LinkedIn profile showcasing professional experience, skills, and recommendations.",
-    "icon": "/assets/icons/social/linkedin.svg",
+    "icon": "/portfolio/assets/icons/social/linkedin.svg",
     "link": "https://linkedin.com/in/kiran-ghorpade"
   },
   {
     "name": "Gmail",
     "type": "Social Platform",
     "description": "Connect me with my email address.",
-    "icon": "/assets/icons/social/gmail.svg",
+    "icon": "/portfolio/assets/icons/social/gmail.svg",
     "link": "mailto:kiranghorpade0014+portfolio@gmail.com"
   },
   {
     "name": "Leetcode",
     "type": "Coding Platform",
     "description": "Practiced coding skills and solved problems on LeetCode.",
-    "icon": "/assets/icons/social/leetcode.svg",
+    "icon": "/portfolio/assets/icons/social/leetcode.svg",
     "link": "https://leetcode.com/u/kiran-ghorpade/"
   },
   {
     "name": "GitHub",
     "type": "Social Platform",
     "description": "Active GitHub user with multiple projects and repositories.",
-    "icon": "/assets/icons/social/github.svg",
+    "icon": "/portfolio/assets/icons/social/github.svg",
     "link": "https://www.github.com/kiran-ghorpade"
   }
 ]
