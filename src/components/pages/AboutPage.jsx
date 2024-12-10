@@ -3,6 +3,7 @@ import Education from "./about/Education";
 import Header from "./about/Header";
 import Summary from "./about/Summary";
 import Hobbies from "./about/Hobbies";
+import ResumeSection from "./about/ResumeSection";
 
 function AboutPage() {
   const theme = useTheme();
@@ -36,6 +37,7 @@ function AboutPage() {
         <Stack gap={1}>
           <Summary />
           <Education />
+          <ResumeSection/>
         </Stack>
       </Grid2>
       {isMobile && (

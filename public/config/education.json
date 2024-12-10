@@ -1,15 +1,28 @@
 [
-    {
-      "degree": "Bachelor of Technology in Computer Science",
-      "institution": "University of Pune",
-      "duration": "2016 - 2020",
-      "location": "Pune, Maharashtra",
-      "description": "Specialized in Software Development, Data Structures, and Web Development.",
-      "achievements": [
-        "Graduated with a 3.8 GPA.",
-        "Completed a capstone project on building a real-time chat application.",
-        "Won the first prize in the University Hackathon 2019."
-      ]
-    }
-  ]
-  
+  {
+    "degree": "Masters of Computer Application (MCA)",
+    "university": "Savitribai Phule Pune University, Pune",
+    "institution": "JSPM's Rajarshi Shau College of Engineering, Pune (Autonomous)",
+    "duration": "2023 - 2025",
+    "location": "Pune, Maharashtra",
+    "description": "Pursuing a Master of Computer Applications degree with a focus on software development, data structures, and web development.",
+    "achievements": [
+      "Graduated with a 3.8 GPA.",
+      "Completed a capstone project on building a real-time chat application.",
+      "Won the first prize in the University Hackathon 2019."
+    ]
+  },
+  {
+    "degree": "Bachelor of Computer Science (BCS)",
+    "university": "Shivaji University, Kolhapur",
+    "institution": "Sadguru Gadage Maharaj College, Karad (Autonomous)",
+    "duration": "2020 - 2023",
+    "location": "Karad, Maharashtra",
+    "description": "Focused on developing a strong foundation in computer science principles, with a emphasis on software development, data structures, and algorithms, and a passion for innovative problem-solving relevant to the field of Computer Science.",
+    "achievements": [
+      "Graduated with a 9.2 GPA.",
+      "Completed a ADRASHA project on building a prototype application.",
+      "Secured the top academic position in the class"
+    ]
+  }
+]

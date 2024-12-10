@@ -6,10 +6,11 @@ import {
   CardActions,
   CardContent,
   CardMedia,
+  Chip,
   Divider,
   IconButton,
   Stack,
-  Typography,
+  Typography
 } from "@mui/material";
 import { Link } from "react-router-dom";
 import Dialog from "../../common/Dialog";
@@ -17,7 +18,7 @@ import Dialog from "../../common/Dialog";
 function ProjectDialog({ project, open, handleCardClick }) {
   return (
     <Dialog open={open} handleClose={handleCardClick} value={project}>
-      <Stack alignItems="center ">
+      <Stack alignItems="center">
         <CardMedia
           component="img"
           sx={{
@@ -38,41 +39,45 @@ function ProjectDialog({ project, open, handleCardClick }) {
           <Box>
             <Typography variant="subtitle1">Technology Used :</Typography>
             {project?.technologies?.map((technology, index) => (
-              <Button key={index} variant="outlined" sx={{ m: 1 }}>
-                {technology}
-              </Button>
+              <Chip
+                key={index}
+                variant="outlined"
+                sx={{ m: 1 }}
+                label={technology}
+              />
             ))}
           </Box>
           <Divider />
         </CardContent>
-        <CardActions>
-          <IconButton LinkComponent={Link} to={project?.links?.github}>
-            <GitHub />
-          </IconButton>
+      </Stack>
 
+      <CardActions>
+        <IconButton LinkComponent={Link} to={project?.links?.github}>
+          <GitHub />
+        </IconButton>
+
+        <Button
+          size="small"
+          color="primary"
+          LinkComponent={Link}
+          target="__blank"
+          to={project?.links?.docs}
+        >
+          Docs
+        </Button>
+
+        {project?.link?.demo && (
           <Button
             size="small"
             color="primary"
             LinkComponent={Link}
             target="__blank"
-            to={project?.links?.docs}
+            to={project?.links?.demo}
           >
-            Docs
+            Demo
           </Button>
-
-          {project?.link?.demo && (
-            <Button
-              size="small"
-              color="primary"
-              LinkComponent={Link}
-              target="__blank"
-              to={project?.links?.demo}
-            >
-              Demo
-            </Button>
-          )}
-        </CardActions>
-      </Stack>
+        )}
+      </CardActions>
     </Dialog>
   );
 }

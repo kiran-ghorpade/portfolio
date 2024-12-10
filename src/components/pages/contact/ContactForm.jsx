@@ -1,9 +1,11 @@
 import { Button, Card, CardContent, Stack, TextField } from "@mui/material";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import SectionHead from "../../common/SectionHead";
+import { InformationContext } from "../../../services/context/InformationContextProvider";
 
 function ContactForm() {
+  const { personalInfo } = useContext(InformationContext);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -28,49 +30,61 @@ function ContactForm() {
       <Card sx={{ maxWidth: 500 }}>
         <CardContent>
           {/* Form Fields */}
-          <TextField
-            sx={{ mb: 2 }}
-            autoFocus
-            required
-            fullWidth
-            margin="dense"
-            variant="standard"
-            label="Name"
-            type="text"
-            name="name"
-            onChange={handleInputChange}
-            helperText="Enter your name"
-            value={formData?.name}
-          />
-          <TextField
-            sx={{ mb: 2 }}
-            required
-            fullWidth
-            margin="dense"
-            variant="standard"
-            label="Email"
-            type="text"
-            name="email"
-            onChange={handleInputChange}
-            helperText="Enter your name"
-            value={formData?.email}
-          />
-          <TextField
-            sx={{ mb: 2 }}
-            required
-            fullWidth
-            margin="dense"
-            variant="standard"
-            label="Email"
-            type="text"
-            name="message"
-            onChange={handleInputChange}
-            helperText="Enter your name"
-            value={formData?.message}
-          />
-          <Button variant="contained" LinkComponent={Link} to="/contact">
-            Contact Me
-          </Button>
+          <form
+            action={`mailto:${personalInfo?.contact?.email}`}
+            method="post"
+            encType="text/plain"
+          >
+            <TextField
+              sx={{ mb: 2 }}
+              autoFocus
+              required
+              fullWidth
+              margin="dense"
+              variant="standard"
+              label="Name"
+              type="text"
+              name="name"
+              onChange={handleInputChange}
+              helperText="Enter your name"
+              value={formData?.name}
+            />
+            <TextField
+              sx={{ mb: 2 }}
+              required
+              fullWidth
+              margin="dense"
+              variant="standard"
+              label="Email"
+              type="email"
+              name="email"
+              onChange={handleInputChange}
+              helperText="Enter your email"
+              value={formData?.email}
+            />
+            <TextField
+              sx={{ mb: 2 }}
+              required
+              fullWidth
+              multiline
+              margin="dense"
+              variant="standard"
+              label="Message"
+              type="text"
+              name="message"
+              onChange={handleInputChange}
+              helperText="Enter your message (multiline allowed)"
+              value={formData?.message}
+            />
+            <Button
+              type="submit"
+              variant="contained"
+              LinkComponent={Link}
+              to="/contact"
+            >
+              Contact Me
+            </Button>
+          </form>
         </CardContent>
       </Card>
     </Stack>

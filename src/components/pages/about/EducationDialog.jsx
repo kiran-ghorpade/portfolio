@@ -1,10 +1,5 @@
 /* eslint-disable react/prop-types */
-import {
-  DialogContentText,
-  Divider,
-  Stack,
-  Typography
-} from "@mui/material";
+import { DialogContentText, Divider, Stack, Typography } from "@mui/material";
 import Dialog from "../../common/Dialog";
 
 // {

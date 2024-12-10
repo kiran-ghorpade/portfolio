@@ -5,7 +5,7 @@ import { IconButton, useTheme } from "@mui/material";
 function SocialLink({ socialAccount, color, borderRadius }) {
   const theme = useTheme();
   return (
-    <a href={socialAccount?.link} target="_blank">
+    <a href={socialAccount?.link} target="_blank" rel="noopener noreferrer">
       <IconButton
         color={color}
         sx={{

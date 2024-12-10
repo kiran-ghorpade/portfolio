@@ -25,7 +25,7 @@ function HomePage() {
         wrap="wrap"
         // direction='column'
         height={{ md: "70vh" }}
-        gap={2}
+        spacing={2}
         data-aos="zoom-in-up"
       >
         <Grid2 size={6} container justifyContent='center'>

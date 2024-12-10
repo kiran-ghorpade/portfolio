@@ -1,8 +1,8 @@
-import { Card, Container, Stack, Typography } from "@mui/material";
-import Section from "../common/Section";
-import SectionHead from "../common/SectionHead";
+import { Container, Stack, Typography } from "@mui/material";
 import { useContext } from "react";
 import { InformationContext } from "../../services/context/InformationContextProvider";
+import Section from "../common/Section";
+import SectionHead from "../common/SectionHead";
 
 function PortfolioPage() {
   const { repositoryInfo } = useContext(InformationContext);
@@ -13,12 +13,10 @@ function PortfolioPage() {
         <Section>
           <Stack alignItems="center" spacing={2} textAlign="center">
             <SectionHead>Portfolio Information</SectionHead>
-            <Card>
-              <Typography variant="h6">Description</Typography>
-              <Typography variant="subtitle1" width="80%">
-                {repositoryInfo?.description || " No Description Found"}
-              </Typography>
-            </Card>
+            <Typography variant="h6">Description</Typography>
+            <Typography variant="subtitle1" width="80%">
+              {repositoryInfo?.description || " No Description Found"}
+            </Typography>
             <Typography variant="h6">Date of Creation</Typography>
             <Typography>
               {new Date(repositoryInfo?.created_at).toLocaleString() ||

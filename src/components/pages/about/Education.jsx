@@ -16,16 +16,16 @@ import EducationDialog from "./EducationDialog";
 
 function EducationCard({ education, handleCardClick }) {
   return (
-    <CardHorizontal>
-      <CardContent>
-        <Typography variant="body1">{education?.degree}</Typography>
-        <Typography variant="caption">{education?.duration}</Typography>
-      </CardContent>
+    <CardHorizontal onClick={() => handleCardClick(education)}>
       <CardActions>
         <IconButton color="info" onClick={() => handleCardClick(education)}>
           <School />
         </IconButton>
       </CardActions>
+      <CardContent sx={{ cursor: "pointer" }}>
+        <Typography variant="body1">{education?.degree}</Typography>
+        <Typography variant="caption">{education?.duration}</Typography>
+      </CardContent>
     </CardHorizontal>
   );
 }

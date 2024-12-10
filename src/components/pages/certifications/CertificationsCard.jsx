@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
 import { GitHub } from "@mui/icons-material";
 import {
-  Box,
   Button,
   CardActions,
   CardContent,
@@ -9,7 +8,7 @@ import {
   Divider,
   IconButton,
   Stack,
-  Typography,
+  Typography
 } from "@mui/material";
 import { Link } from "react-router-dom";
 import CardHorizontal from "../../common/CardHorizontal";
@@ -29,12 +28,13 @@ function CertificationsCard({ project, handleCardClick }) {
       />
       <Stack width="100%">
         <CardContent>
-          <Box minHeight={150}>
+          <Stack minHeight={150} justifyContent="space-between">
             <Typography variant="h6">{project?.title}</Typography>
             <Typography variant="body2" color="textSecondary">
               {project?.description}
             </Typography>
-          </Box>
+            <Typography variant="caption">{project?.duration}</Typography>
+          </Stack>
         </CardContent>
         <Divider />
         <CardActions>

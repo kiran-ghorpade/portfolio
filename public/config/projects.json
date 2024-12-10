@@ -3,7 +3,8 @@
     "title": "Alternative Digital Registry For ASHA",
     "technologies": ["C#", ".NET", "Winforms", "SQLite"],
     "image": "/assets/images/project/adrasha/FlashScreen.png",
-    "description": "Desktop Prototype",
+    "abstract":"Desktop Prototype for Project ADRASHA",
+    "description": "The 'ADRASHA Desktop Prototype' is Final Year Project for Bachelor of Computer Science Course of Shivaji University. The ADRASHA will provide an effective way to manage the Accredited Social Health Activist program in India. The system will automate various processes, reducing the workload of ASHA and improving the efficiency of the program. The system will also provide a more accurate way of tracking and monitoring beneficiaries, ensuring that they receive the necessary healthcare services.",
     "links": {
       "github": "https://www.github.com/kiran-ghorpade/adrasha",
       "demo": "https://example.com/demo/adrasha"
@@ -13,9 +14,10 @@
     "title": "Inspirational India",
     "technologies": ["React", "SpringBoot", "Java", "Javascript"],
     "image": "/assets/images/project/adrasha/FlashScreen.png",
-    "description": "Blogging Website",
+    "abstract":"Blogging Website",
+    "description": "A react webapp which provides information of Indian Tribes. Used Java language for backend using Springboot Framework.",
     "links": {
-      "github": "https://www.github.com/kiran-ghorpade/inspirationalIndia",
+      "github": "https://github.com/Kiran-Ghorpade-0014/InspirationalIndia",
       "demo": "https://example.com/demo/inspirationalIndia"
     }
   },
@@ -23,7 +25,8 @@
     "title": "Portfolio",
     "technologies": ["React", "Material UI", "Javascript"],
     "image": "/assets/images/project/portfolio/portfolio_home.png",
-    "description": "Personal Portfolio Website built to showcase skills and projects",
+    "abstract": "Personal Portfolio Website built to showcase skills and projects",
+    "description": "Personal Portfolio Website built using react and material ui which presents my skills and projects",
     "links": {
       "github": "https://www.github.com/kiran-ghorpade/portfolio",
       "demo": "https://example.com/demo/portfolio"

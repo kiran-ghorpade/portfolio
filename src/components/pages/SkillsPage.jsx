@@ -26,7 +26,7 @@ function SkillsPage() {
         <FilterButtons skills={skills} setFilterSkill={setFilterSkill} />
         <Divider />
 
-        <Grid2 container spacing={4}>
+        <Grid2 container spacing={{md:4, xs:2}}>
           {filterSkill?.map((skill) =>
             skill?.values?.map((value, index) => (
               <Grid2 size={{ md: 3, xs: 6 }} key={index} data-aos="fade-up">

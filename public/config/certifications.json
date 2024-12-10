@@ -2,22 +2,25 @@
   {
     "title": "Google CyberSecurity",
     "institution": "Coursera",
-    "date": "Jan 2021",
-    "description": "A certification course that covers the fundamentals and advanced concepts of React, including hooks, context API, and state management.",
-    "image": "/public/assets/images/certificates/Google CyberSecurity.png"
+    "duration": "Jan 2024 - May 2023 ",
+    "abstract": "CyberSecurity",
+    "description": "Learn the fundamentals of cybersecurity and how to protect yourself and your organization from cyber threats.",
+    "image": "/assets/images/certificates/Google Cybersecurity.png"
   },
   {
     "title": "Infosys Full Stack Web Development",
     "institution": "Infosys Springboard",
-    "date": "Jan 2021",
-    "description": "A certification course that covers the fundamentals and advanced concepts of React, including hooks, context API, and state management.",
-    "image": "/public/assets/images/certificates/Infosys Full Stack Web Development.png"
+    "duration": "Aug 2023 - Dec 2023",
+    "abstract": "Web Development",
+    "description": "Learn the fundamentals of web development and how to build a full stack web application.",
+    "image": "/assets/images/certificates/Infosys Full Stack Web Development.png"
   },
   {
     "title": "UIPath Automation",
     "institution": "Coursera",
-    "date": "Dec 2020",
-    "description": "Course on building full-stack web applications using Node.js, Express, MongoDB, and React.",
-    "image": "/public/assets/images/certificates/UIPath Automation.png"
+    "duration": "Feb 2024 - Jun 2024",
+    "abstract": "Automation",
+    "description": "Learn the fundamentals of automation and how to automate tasks using UIPath.",
+    "image": "/assets/images/certificates/UIPath Automation.png"
   }
 ]
