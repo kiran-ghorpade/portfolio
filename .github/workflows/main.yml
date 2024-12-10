@@ -1,39 +1,40 @@
-name: Deploy to GitHub Pages
+name: Deploy Dist Folder to Main Branch
 
 on:
   push:
     branches:
-      - react_app # Run the workflow when changes are pushed to the `react_app` branch
-  workflow_dispatch: # Allow manual trigger
+      - react_app  # Trigger on changes to the `react_app` branch
+  workflow_dispatch:  # Allow manual trigger
 
 permissions:
-  contents: write # Permission to write to this repository for main branch
+  contents: write
 
 jobs:
-  build-and-deploy:
+  copy-dist-to-main:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout the code from the source branch
-      - name: Checkout code
-        uses: actions/checkout@v3
+    # Step 1: Checkout the react_app branch
+    - name: Checkout source branch
+      uses: actions/checkout@v3
 
-      # Step 2: Set up Node.js
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 20 # Use the required Node.js version
+    # Step 2: Check if changes are made in src or public
+    - name: Check for changes in src or public
+      id: changes-check
+      run: |
+        git fetch origin main
+        git diff --quiet origin/main -- ./dist || echo "changes-detected=true" >> $GITHUB_ENV
 
-      # Step 3: Install dependencies and build the project
-      - name: Install dependencies and build
-        run: |
-          npm ci
-          npm run build
+    # Step 3: Exit if no changes
+    - name: Skip deployment if no changes
+      if: env.changes-detected != 'true'
+      run: echo "No changes detected. Skipping deployment."
 
-      # Step 4: Deploy the build folder to the main branch
-      - name: Deploy to main branch
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: main
-          publish_dir: dist
+    # Step 4: Push the `dist` folder to the `main` branch
+    - name: Deploy dist folder to main branch
+      if: env.changes-detected == 'true'
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_branch: main
+        publish_dir: dist
