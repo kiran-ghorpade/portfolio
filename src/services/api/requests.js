@@ -1,17 +1,18 @@
 // Requests to fetch data from public folder
 
+const base = "/portfolio/config";
+
 const requestLink = {
-  PersonalInformation: "/config/personalInfo.json",
-  Hobbies: "/config/hobbies.json",
-  Languages: "/config/languages.json",
-  SocialAccounts: "/config/socialAccounts.json",
-  Education: "/config/education.json",
-  Skills: "/config/skills.json",
-  Projects: "/config/projects.json",
-  Certifications: "/config/certifications.json",
+  PersonalInformation: `${base}/personalInfo.json`,
+  Hobbies: `${base}/hobbies.json`,
+  Languages: `${base}/languages.json`,
+  SocialAccounts: `${base}/socialAccounts.json`,
+  Education: `${base}/education.json`,
+  Skills: `${base}/skills.json`,
+  Projects: `${base}/projects.json`,
+  Certifications: `${base}/certifications.json`,
   Repository: "https://api.github.com/repos/kiran-ghorpade/portfolio",
 };
-
 
 // ---------------------------------------------------------------------
 // Personal Information
@@ -97,7 +98,6 @@ export async function fetchCertificationsInfo() {
   }
 }
 
-
 // ---------------------------------------------------------------------
 //  About Portfolio
 // ---------------------------------------------------------------------
@@ -109,5 +109,3 @@ export async function fetchRepositoryInfo() {
     return console.error("Error Loading Information ", err);
   }
 }
-
-
