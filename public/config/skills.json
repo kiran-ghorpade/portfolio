@@ -11,7 +11,7 @@
           "and back-end development using modern frameworks ",
           "and libraries like React, Node.js, and Express."
         ],
-        "image": "/assets/icons/tech/javascript.svg",
+        "image": "/portfolio/assets/icons/tech/javascript.svg",
         "links": {
           "certification": "",
           "projects": []
@@ -21,7 +21,7 @@
         "name": "C++",
         "level": "Intermediate",
         "description": "Proficient in JavaScript for both front-end and back-end development using modern frameworks and libraries like React, Node.js, and Express.",
-        "image": "/assets/icons/tech/c++.svg",
+        "image": "/portfolio/assets/icons/tech/c++.svg",
         "links": {
           "certification": "",
           "projects": []
@@ -31,7 +31,7 @@
         "name": "SQL",
         "level": "Intermediate",
         "description": "Experience writing and optimizing SQL queries for relational databases such as MySQL and PostgreSQL.",
-        "image": "/assets/icons/tech/sql.svg",
+        "image": "/portfolio/assets/icons/tech/sql.svg",
         "links": {
           "certification": "",
           "projects": []
@@ -41,7 +41,7 @@
         "name": "Python",
         "level": "Beginner",
         "description": "Skilled in Python for web development, automation scripts, and data science applications with libraries like Flask and Pandas.",
-        "image": "/assets/icons/tech/python.svg",
+        "image": "/portfolio/assets/icons/tech/python.svg",
         "links": {
           "certification": "",
           "projects": []
@@ -57,7 +57,7 @@
         "name": "React",
         "level": "Intermediate",
         "description": "Extensive experience building user interfaces with React and React Hooks, focusing on responsive, performant, and reusable components.",
-        "image": "/assets/icons/tech/react.svg",
+        "image": "/portfolio/assets/icons/tech/react.svg",
         "links": {
           "certification": "",
           "projects": []
@@ -67,7 +67,7 @@
         "name": "Node.js",
         "level": "Beginner",
         "description": "Experience using Node.js for building scalable server-side applications and APIs with Express and MongoDB.",
-        "image": "/assets/icons/tech/nodejs.svg",
+        "image": "/portfolio/assets/icons/tech/nodejs.svg",
         "links": {
           "certification": "",
           "projects": []
@@ -77,7 +77,7 @@
         "name": "Bootstrap",
         "level": "Intermediate",
         "description": "Extensive experience building user interfaces with React and React Hooks, focusing on responsive, performant, and reusable components.",
-        "image": "/assets/icons/tech/bootstrap5.svg",
+        "image": "/portfolio/assets/icons/tech/bootstrap5.svg",
         "links": {
           "certification": "",
           "projects": []
@@ -93,7 +93,7 @@
         "name": "Visual Studio",
         "level": "Intermediate",
         "description": "Strong knowledge of Git for version control, including branching, merging, and collaborative development workflows.",
-        "image": "/assets/icons/tech/visualStudio.svg",
+        "image": "/portfolio/assets/icons/tech/visualStudio.svg",
         "links": {
           "certification": "",
           "projects": []
@@ -109,7 +109,7 @@
         "name": "MongoDB",
         "level": "Beginner",
         "description": "Hands-on experience with MongoDB for building NoSQL databases with efficient data modeling and aggregation.",
-        "image": "/assets/icons/tech/mongodb.svg",
+        "image": "/portfolio/assets/icons/tech/mongodb.svg",
         "links": {
           "certification": "",
           "projects": []
@@ -125,7 +125,7 @@
         "name": "Git",
         "level": "Beginner",
         "description": "Strong knowledge of Git for version control, including branching, merging, and collaborative development workflows.",
-        "image": "/assets/icons/tech/git.svg",
+        "image": "/portfolio/assets/icons/tech/git.svg",
         "links": {
           "certification": "",
           "projects": []
@@ -135,7 +135,7 @@
         "name": "GitHub",
         "level": "Beginner",
         "description": "Strong knowledge of Git for version control, including branching, merging, and collaborative development workflows.",
-        "image": "/assets/icons/tech/github.svg",
+        "image": "/portfolio/assets/icons/tech/github.svg",
         "links": {
           "certification": "",
           "projects": []
